@@ -1,0 +1,390 @@
+{
+	"info": {
+		"_postman_id": "eb6cdf2a-f320-48e4-9ba4-e163c74dc767",
+		"name": "Nde_express_sequelize",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MTNjYTk1MWFhOTdlNzU2ZjRmMGY0NDQiLCJpYXQiOjE2MzEzNjU1MDEsImV4cCI6MTYzMTk3MDMwMX0.cdoS2-NssRZ9AiYl9pQ5bpkeopTEOJ2f6ve3_19brWs",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Rahul\",\n    \"lastName\": \"Bera\",\n    \"email\": \"rahulbera7@gmail.com\",\n    \"password\": \"Master@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/v1/auth/login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MTNjYWRhMTNmY2I4MTY3NjFmYzFiNWYiLCJpYXQiOjE2MzEzNjY1NjcsImV4cCI6MTYzMTk3MTM2N30.iJUen4QSR8F8t4z4ugRO-eH0cotPQSKhZ2nVVFVgUss",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MTNjYTk1MWFhOTdlNzU2ZjRmMGY0NDQiLCJpYXQiOjE2MzEzNjU1MDEsImV4cCI6MTYzMTk3MDMwMX0.cdoS2-NssRZ9AiYl9pQ5bpkeopTEOJ2f6ve3_19brWs",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"rahulbera7@gmail.com\",\n    \"password\": \"Master@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Topic",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTYzMTk3MDE0MywiZXhwIjoxNjMxOTcxOTQzLCJ0eXBlIjoiYWNjZXNzIn0.eraHwylOLiVKtF2RQcLKEltYjeNdetavyQmusT2CcP4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Politics\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/topic",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"topic"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Topic By Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTYzMTk3MDE0MywiZXhwIjoxNjMxOTcxOTQzLCJ0eXBlIjoiYWNjZXNzIn0.eraHwylOLiVKtF2RQcLKEltYjeNdetavyQmusT2CcP4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Politics\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/topic/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"topic",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Topic List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTYzMTk3MDE0MywiZXhwIjoxNjMxOTcxOTQzLCJ0eXBlIjoiYWNjZXNzIn0.eraHwylOLiVKtF2RQcLKEltYjeNdetavyQmusT2CcP4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Politics\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/topic",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"topic"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTYzMTk5MzU5MSwiZXhwIjoxNjMxOTk1MzkxLCJ0eXBlIjoiYWNjZXNzIn0.WitNfucOyPReVJhHDQ6aJ2RjgkMvvzOwv96oXElxNDE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MTNjYTk1MWFhOTdlNzU2ZjRmMGY0NDQiLCJpYXQiOjE2MzEzNjU1MDEsImV4cCI6MTYzMTk3MDMwMX0.cdoS2-NssRZ9AiYl9pQ5bpkeopTEOJ2f6ve3_19brWs",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "description",
+							"value": "Sample Post",
+							"type": "text"
+						},
+						{
+							"key": "allowComments",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "media",
+							"type": "file",
+							"src": [
+								"/home/trt-dev/Downloads/Sample Content/pirates.jpeg",
+								"/home/trt-dev/Downloads/Sample Content/aquaman.jpg",
+								"/home/trt-dev/Downloads/Sample Content/iron_man.jpeg",
+								"/home/trt-dev/Downloads/Sample Content/black_panther.jpeg"
+							]
+						},
+						{
+							"key": "topicId",
+							"value": "1",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/post",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Comment on Post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTYzMjA2MTIwMSwiZXhwIjoxNjMyMDYzMDAxLCJ0eXBlIjoiYWNjZXNzIn0.aJF4w7xLFJYg91RDG00OlsDuGyYHsUuoT1asgYuxBjY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MTNjYTk1MWFhOTdlNzU2ZjRmMGY0NDQiLCJpYXQiOjE2MzEzNjU1MDEsImV4cCI6MTYzMTk3MDMwMX0.cdoS2-NssRZ9AiYl9pQ5bpkeopTEOJ2f6ve3_19brWs",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"comment\": \"Yes Comment\",\n    \"postId\": 7\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/comment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"comment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Post List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTYzMjA0NzEyNywiZXhwIjoxNjMyMDQ4OTI3LCJ0eXBlIjoiYWNjZXNzIn0.79tOtbZMIbW82iscy62-ldIZFC97Wyn3dniODRKnEbg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Politics\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/post?page=1&limit=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"post"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
