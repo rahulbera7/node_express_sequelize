@@ -2,21 +2,21 @@
   "development": {
     "username": "root",
     "password": "Mysql@123",
-    "database": "openxcell_demo",
+    "database": "demo",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
     "password": "Mysql@123",
-    "database": "openxcell_demo",
+    "database": "demo",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
     "password": "Mysql@123",
-    "database": "openxcell_demo",
+    "database": "demo",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }
